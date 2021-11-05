@@ -1,6 +1,8 @@
 (function($) {
     "use strict";
 
+    let mailId = 'tur461.er@gmail.com';
+
     $('body').scrollspy({
         target: '.navbar-fixed-top',
         offset: 60
@@ -29,6 +31,10 @@
 
     $('#galleryModal').on('show.bs.modal', function (e) {
        $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+    });
+
+    $('#send_mail').on('click', e => {
+        console.log('sending mail... to: ' + mailId);
     });
 
 })(jQuery);
